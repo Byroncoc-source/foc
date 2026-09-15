@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fundamentals of Computing</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 15px;
+        }
+
+        /* MAIN LAYOUT */
+        .container {
+            display: flex;
+            min-height: 500px;
+        }
+
+        /* SIDE NAVIGATION */
+        nav {
+            width: 220px;
+            background-color: #ffffff;
+            padding: 25px 15px;
+            border-right: 1px solid #ddd;
+        }
+
+        nav h3 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* MIDDLE CONTENT */
+        main {
+            flex: 1;
+            padding: 35px;
+            background-color: #eaf4ff;
+        }
+
+        main h2 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        main p {
+            line-height: 1.6;
+        }
+
+        /* COMPUTING IMAGE */
+        .computing-image {
+            display: block;
+            width: 500px;
+            max-width: 100%;
+            height: auto;
+            margin: 10px auto 25px;
+            border-radius: 10px;
+            border: 2px solid #333;
+        }
+
+        /* PROJECT BUTTONS */
+        .project-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .project-button {
+            display: block;
+            text-decoration: none;
+            background-color: white;
+            color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #333;
+            text-align: center;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .project-button:hover {
+            background-color: #333;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* SMALL SCREEN */
+        @media (max-width: 700px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            nav {
+                width: 100%;
+                border-right: none;
+            }
+
+            .project-buttons {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>Fundamentals of Computing</h1>
+
+        <p>My Computing Course Website</p>
+
+    </header>
+
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+        <!-- LEFT NAVIGATION -->
+        <nav>
+
+            <h3>Menu</h3>
+
+            <a href="index2.html">Course</a>
+
+            <a href="project.html">Project</a>
+
+            <a href="concepts.html">Concepts</a>
+
+            <a href="database.html">Databases</a>
+
+            <a href="documentation.html">Documentation</a>
+
+            <a href="aboutme1.html">Dev Team</a>
+
+        </nav>
+
+
+        <!-- MIDDLE CONTENT -->
+        <main>
+
+            <h2>Welcome</h2>
+
+            <img src="computing.jpg" alt="Computing" class="computing-image">
+
+            <p>
+                This course is an introduction to the fundamentals of Computer Science that will provide students with a foundation for future courses in Computer Science.
+
+The course is a broad survey of the discipline through topics that allow students to understand the capabilities of computer systems in terms of computer architecture, operating systems and computer networks, software and software development, data organization and visualization, and the potential of computing machines.
+            </p>
+
+            <p>
+                Use the menu on the left to move between the different
+                sections of the website.
+            </p>
+
+        </main>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>@ Byron Coc | Fundamentals of Computing</p>
+
+    </footer>
+
+</body>
+
+</html>

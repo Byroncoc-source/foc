@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fundamentals of Computing</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            background-color: #1E90FF;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .row {
+            display: flex;
+            min-height: 350px;
+        }
+
+        .side {
+            width: 15%;
+            background-color: white;
+            padding: 20px 18px;
+        }
+
+        .side a {
+            display: block;
+            margin-bottom: 10px;
+            color: #0066ff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .side a:hover {
+            text-decoration: underline;
+        }
+
+        .middle {
+            width: 70%;
+            background-color: #00FA9A;
+            padding: 20px;
+            color: #111;
+        }
+
+        .middle-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* PROFILE IMAGE */
+        .course-image {
+            display: block;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin: 0 auto 25px;
+            border: 3px solid #111;
+            border-radius: 50%;
+        }
+
+        .middle p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+
+        .right {
+            width: 15%;
+            background-color: white;
+        }
+
+        .footer {
+            background-color: #1E90FF;
+            color: red;
+            padding: 14px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 700px) {
+
+            .row {
+                flex-direction: column;
+            }
+
+            .side,
+            .middle,
+            .right {
+                width: 100%;
+            }
+
+            .side {
+                text-align: center;
+            }
+
+            .course-image {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>ABOUT Me</h1>
+    </div>
+
+    <div class="row">
+
+        <div class="side">
+
+            <a href="index2.html">Course</a>
+
+            <a href="project.html">Project</a>
+
+            <a href="concepts.html">Concepts</a>
+
+            <a href="database.html">Databases</a>
+
+            <a href="documentation.html">Documentation</a>
+
+            <a href="aboutme1.html">Dev Team</a>
+
+        </div>
+
+        <div class="middle">
+
+            <div class="middle-content">
+
+                <img src="capture.jpg"
+                     alt="Me"
+                     class="course-image">
+
+                <p>
+                    Yes..... This page is about me.
+                </p>
+
+                <p>
+                    Hi, My name is Byron... and I am from Cristo Rey Village.
+                    I finished High School at Eden SDA High and am currently
+                    aiming to finish this associate degree at The University
+                    Of Belize. I work part-time at New Flags.
+                    Stay motivated guys!!!
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="right"></div>
+
+    </div>
+
+    <div class="footer">
+
+        <p>@ Byron Isaiah Coc</p>
+
+    </div>
+
+</body>
+</html>
