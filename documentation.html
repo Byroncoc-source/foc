@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Documentation - Fundamentals of Computing</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 15px;
+        }
+
+        /* MAIN LAYOUT */
+        .container {
+            display: flex;
+            min-height: 500px;
+        }
+
+        /* SIDE MENU */
+        nav {
+            width: 220px;
+            background-color: white;
+            padding: 25px 15px;
+            border-right: 1px solid #ddd;
+        }
+
+        nav h3 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            flex: 1;
+            padding: 35px;
+            background-color: #eaf4ff;
+            text-align: center;
+        }
+
+        main h2 {
+            margin-top: 0;
+            font-size: 30px;
+        }
+
+        main p {
+            line-height: 1.6;
+        }
+
+        /* CLICKABLE IMAGE */
+        .documentation-image {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .documentation-image img {
+            width: 515px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #333;
+            transition: 0.2s;
+        }
+
+        .documentation-image img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* SMALL SCREEN */
+        @media (max-width: 700px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            nav {
+                width: 100%;
+                border-right: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>Fundamentals of Computing</h1>
+
+        <p>My Computing Course Website</p>
+
+    </header>
+
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+
+        <!-- LEFT NAVIGATION -->
+        <nav>
+
+            <h3>Menu</h3>
+
+            <a href="index2.html">Course</a>
+
+            <a href="project.html">Project</a>
+
+            <a href="concepts.html">Concepts</a>
+
+            <a href="database.html">Databases</a>
+
+            <a href="documentation.html">Documentation</a>
+
+            <a href="aboutme1.html">Dev Team</a>
+
+        </nav>
+
+
+        <!-- DOCUMENTATION CONTENT -->
+        <main>
+
+            <h2>Documentation</h2>
+
+            <p>
+                Click the image below to view the documentation.
+            </p>
+
+            <a href="https://drive.google.com/file/d/1emYNyAIPOih0PMWEr-woOZiIIOPaUv4t/view?usp=sharing"
+               target="_blank"
+               class="documentation-image">
+
+                <img src="documentation.png"
+                     alt="Documentation">
+
+            </a>
+
+            <p>
+                Click on the image above for documentation.
+            </p>
+
+        </main>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>@ Byron Coc | Fundamentals of Computing</p>
+
+    </footer>
+
+
+</body>
+
+</html>

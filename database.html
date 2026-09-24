@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Databases - Fundamentals of Computing</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 15px;
+        }
+
+        /* MAIN LAYOUT */
+        .container {
+            display: flex;
+            min-height: 500px;
+        }
+
+        /* SIDE MENU */
+        nav {
+            width: 220px;
+            background-color: white;
+            padding: 25px 15px;
+            border-right: 1px solid #ddd;
+        }
+
+        nav h3 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            flex: 1;
+            padding: 35px;
+            background-color: #eaf4ff;
+        }
+
+        main h2 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        main p {
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* DATABASE BUTTON */
+        .database-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .database-button {
+            display: block;
+            text-decoration: none;
+            background-color: white;
+            color: #222;
+            padding: 25px 50px;
+            border-radius: 10px;
+            border: 2px solid #333;
+            text-align: center;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .database-button:hover {
+            background-color: #333;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* SMALL SCREEN */
+        @media (max-width: 700px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            nav {
+                width: 100%;
+                border-right: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>Fundamentals of Computing</h1>
+
+        <p>My Computing Course Website</p>
+
+    </header>
+
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+
+        <!-- LEFT NAVIGATION -->
+        <nav>
+
+            <h3>Menu</h3>
+
+            <a href="index2.html">Course</a>
+
+            <a href="project.html">Project</a>
+
+            <a href="concepts.html">Concepts</a>
+
+            <a href="database.html">Databases</a>
+
+            <a href="documentation.html">Documentation</a>
+
+            <a href="aboutme1.html">Dev Team</a>
+
+        </nav>
+
+
+        <!-- DATABASE CONTENT -->
+        <main>
+
+            <h2>Databases</h2>
+
+            <p>
+                This section contains my Fundamentals of Computing
+                database presentation.
+            </p>
+
+            <div class="database-buttons">
+
+                <a href="https://drive.google.com/file/d/1gL6zYcdEBFgzvh-4iPgwfkvESouDlsbX/view"
+                   class="database-button"
+                   target="_blank">
+                    --------Database Presentation---------
+                </a>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>@ Byron Coc | Fundamentals of Computing</p>
+
+    </footer>
+
+
+</body>
+
+</html>
