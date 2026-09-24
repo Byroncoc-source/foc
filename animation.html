@@ -1,26 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Animation - Fundamentals of Computing</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 15px;
+        }
+
+        /* MAIN LAYOUT */
+        .container {
+            display: flex;
+            min-height: 500px;
+        }
+
+        /* SIDE NAVIGATION */
+        nav {
+            width: 220px;
+            background-color: #ffffff;
+            padding: 25px 15px;
+            border-right: 1px solid #ddd;
+        }
+
+        nav h3 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* MIDDLE CONTENT */
+        main {
+            flex: 1;
+            padding: 35px;
+            background-color: #eaf4ff;
+            text-align: center;
+        }
+
+        main h2 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        main p {
+            line-height: 1.6;
+        }
+
+        /* JAVASCRIPT IMAGE */
+        #myImage {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            display: block;
+            margin: 25px auto;
+        }
+
+        /* BUTTONS */
+        button {
+            background-color: white;
+            color: #222;
+            border: 2px solid #333;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* SMALL SCREEN */
+        @media (max-width: 700px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            nav {
+                width: 100%;
+                border-right: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
 <body>
 
-<h2>What Can JavaScript Do?</h2>
+    <!-- HEADER -->
+    <header>
 
-<p>JavaScript can change HTML attribute values.</p>
+        <h1>Fundamentals of Computing</h1>
 
-<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+        <p>My Computing Course Website</p>
 
-<button onclick="document.getElementById('myImage').src='happy.png'">Go Happy</button>
+    </header>
 
-<img id="myImage" src="sad.png" style="width:100px">
 
-<button onclick="document.getElementById('myImage').src='sad.png'">GO Sad</button>
-        <div class="side">
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+        <!-- LEFT NAVIGATION -->
+        <nav>
+
+            <h3>Menu</h3>
+
             <a href="index.html">Course</a>
+
             <a href="project.html">Project</a>
+
             <a href="concepts.html">Concepts</a>
+
             <a href="database.html">Databases</a>
+
             <a href="documentation.html">Documentation</a>
+
             <a href="aboutme1.html">Dev Team</a>
-			<a href="animation.html">Animation_happy/sad</a>
-        </div>
+
+            <a href="animation.html">Animation_happy/sad</a>
+
+        </nav>
+
+
+        <!-- MAIN CONTENT -->
+        <main>
+
+            <h2>What Can JavaScript Do?</h2>
+
+            <p>
+                JavaScript can change HTML attribute values.
+            </p>
+
+            <p>
+                In this example, JavaScript changes the
+                <strong>src</strong> attribute of an image.
+            </p>
+
+
+            <!-- HAPPY BUTTON -->
+            <button onclick="document.getElementById('myImage').src='happy.png'">
+                Go Happy
+            </button>
+
+
+            <!-- IMAGE -->
+            <img id="myImage" src="sad.png" alt="Happy or Sad face">
+
+
+            <!-- SAD BUTTON -->
+            <button onclick="document.getElementById('myImage').src='sad.png'">
+                Go Sad
+            </button>
+
+        </main>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>@ Byron Coc | Fundamentals of Computing</p>
+
+    </footer>
+
+
 </body>
+
 </html>
