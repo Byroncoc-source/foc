@@ -92,12 +92,26 @@
             line-height: 1.6;
         }
 
+        /* PROJECT IMAGE */
+        .project-image {
+            display: block;
+            width: 420px;
+            max-width: 90%;
+            height: auto;
+            margin: 15px auto 20px;
+            border-radius: 10px;
+            border: 2px solid #333;
+        }
+
         /* PROJECT BUTTONS */
         .project-buttons {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 18px;
             margin-top: 30px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .project-button {
@@ -106,6 +120,7 @@
             background-color: white;
             color: #222;
             padding: 20px;
+            min-height: 70px;
             border-radius: 10px;
             border: 2px solid #333;
             text-align: center;
@@ -156,6 +171,10 @@
                 grid-column: auto;
             }
 
+            .project-image {
+                width: 350px;
+            }
+
         }
 
     </style>
@@ -195,6 +214,8 @@
 
             <a href="aboutme1.html">Dev Team</a>
 
+            <a href="animation.html">Animation_happy/sad</a>
+
         </nav>
 
 
@@ -203,9 +224,22 @@
 
             <h2>Projects</h2>
 
+            <img src="pro.png"
+                 alt="Fundamentals of Computing Projects"
+                 class="project-image">
+
             <p>
-                This section contains the projects completed for
-                Fundamentals of Computing.
+                This section Has examples and interactive projects
+                created for F.O.C.
+            </p>
+
+            <p>
+                Each project demonstrates a different computing concept.
+                The projects below include logic gates, number-system
+                conversions, character encoding, and machine language.
+                They are designed to give a simple example of how each
+                concept works through demonstrations, simulations, or
+                converters.........
             </p>
 
             <div class="project-buttons">
@@ -218,24 +252,32 @@
                     2. AND Gate
                 </a>
 
+                <a href="orgate.html" class="project-button">
+                    3. OR Gate
+                </a>
+
+                <a href="xorgate.html" class="project-button">
+                    4. XOR Gate
+                </a>
+
                 <a href="easyand.html" class="project-button">
-                    3. AND Gate - Easy Version
+                    5. AND Gate - Easy Version
                 </a>
 
                 <a href="binarytohex.html" class="project-button">
-                    4. Binary to Hexadecimal Converter
+                    6. Binary to Hexadecimal Converter
                 </a>
 
                 <a href="ascii.html" class="project-button">
-                    5. ASCII Converter
+                    7. ASCII Converter
                 </a>
 
                 <a href="unicode.html" class="project-button">
-                    6. UNICODE Converter
+                    8. UNICODE Converter
                 </a>
 
                 <a href="MLinstructions.html" class="project-button last-button">
-                    7. Machine Language Instructions Converter
+                    9. Machine Language Instructions Converter
                 </a>
 
             </div>
