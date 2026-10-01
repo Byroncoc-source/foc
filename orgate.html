@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OR Logic Gate - Fundamentals of Computing</title>
+    <style>
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 { margin: 0; font-size: 32px; }
+        header p { margin: 8px 0 0; font-size: 15px; }
+
+        .container {
+            display: flex;
+            min-height: 500px;
+        }
+
+        nav {
+            width: 220px;
+            background-color: #ffffff;
+            padding: 25px 15px;
+            border-right: 1px solid #ddd;
+        }
+
+        nav h3 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        main {
+            flex: 1;
+            padding: 35px;
+            background-color: #eaf4ff;
+            text-align: center;
+        }
+
+        main h2 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        main p {
+            line-height: 1.6;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gate-box {
+            max-width: 850px;
+            margin: 25px auto;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .gate-area {
+            position: relative;
+            width: 650px;
+            max-width: 100%;
+            height: 300px;
+            margin: 10px auto;
+        }
+
+        .gate-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .wire {
+            stroke: #16851a;
+            stroke-width: 5;
+            fill: none;
+        }
+
+        .wire.off {
+            stroke: #777;
+        }
+
+        .input-box {
+            fill: white;
+            stroke: #222;
+            stroke-width: 3;
+        }
+
+        .output-circle {
+            fill: white;
+            stroke: #222;
+            stroke-width: 4;
+        }
+
+        .gate-shape {
+            fill: white;
+            stroke: #111;
+            stroke-width: 4;
+        }
+
+        .signal-number {
+            font-size: 25px;
+            font-weight: bold;
+            text-anchor: middle;
+            dominant-baseline: middle;
+            fill: #16851a;
+        }
+
+        .signal-number.off {
+            fill: #555;
+        }
+
+        .label {
+            font-size: 16px;
+            font-weight: bold;
+            text-anchor: middle;
+            fill: #333;
+        }
+
+        .gate-name {
+            font-size: 20px;
+            font-weight: bold;
+            fill: #333;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 12px auto 5px;
+        }
+
+        button {
+            background-color: white;
+            color: #222;
+            border: 2px solid #333;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        .status {
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer p { margin: 0; }
+
+        @media (max-width: 700px) {
+            .container { flex-direction: column; }
+            nav {
+                width: 100%;
+                border-right: none;
+            }
+            main { padding: 25px 12px; }
+            .gate-area { height: 260px; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Fundamentals of Computing</h1>
+        <p>My Computing Course Website</p>
+    </header>
+
+    <div class="container">
+
+        <nav>
+            <h3>Menu</h3>
+            <a href="index.html">Course</a>
+            <a href="project.html">Project</a>
+            <a href="concepts.html">Concepts</a>
+            <a href="database.html">Databases</a>
+            <a href="documentation.html">Documentation</a>
+            <a href="aboutme1.html">Dev Team</a>
+        </nav>
+
+
+        <main>
+            <h2>OR Logic Gate</h2>
+
+            <p>The OR operation produces an output of 1 when at least one of the inputs is 1.</p>
+
+            <p>An animation of a OR logic gate is given below.</p>
+
+            <div class="gate-box">
+
+                <div class="gate-area">
+
+            <svg class="gate-svg" viewBox="0 0 650 300" aria-label="OR logic gate simulation">
+                <text x="90" y="70" class="label">Input A</text>
+                <text x="90" y="215" class="label">Input B</text>
+
+                <rect x="55" y="82" width="70" height="55" rx="4" class="input-box"/>
+                <text id="inputAText" x="90" y="110" class="signal-number">0</text>
+
+                <rect x="55" y="155" width="70" height="55" rx="4" class="input-box"/>
+                <text id="inputBText" x="90" y="183" class="signal-number">0</text>
+
+                <line id="wireA" x1="125" y1="110" x2="300" y2="110" class="wire off"/>
+                <line id="wireB" x1="125" y1="183" x2="300" y2="183" class="wire off"/>
+
+                <path class="gate-shape" d="M 300 65 Q 360 65 400 130 Q 360 195 300 195 Q 330 130 300 65 Z"/>
+
+                <line id="wireOut" x1="400" y1="130" x2="520" y2="130" class="wire off"/>
+                <circle id="outputCircle" cx="555" cy="130" r="38" class="output-circle"/>
+                <text id="outputText" x="555" y="130" class="signal-number">0</text>
+
+                <text x="555" y="190" class="label">Output</text>
+                <text x="350" y="245" class="gate-name">OR Gate</text>
+            </svg>
+
+                </div>
+
+                <div class="controls">
+                    <button onclick="setInputs(false, false)">Off OR Off</button>
+                    <button onclick="setInputs(true, true)">On OR On</button>
+                    <button onclick="setInputs(false, true)">Off OR On</button>
+                    <button onclick="setInputs(true, false)">On OR Off</button>
+                </div>
+
+                <div id="status" class="status">
+                    Input A = 0 | Input B = 0 | Output = 0
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>@ Byron Coc | Fundamentals of Computing</p>
+    </footer>
+
+    <script>
+
+        let inputA = false;
+        let inputB = false;
+
+        function updateGate() {
+            const output = inputA || inputB;
+
+            document.getElementById("inputAText").textContent = inputA ? "1" : "0";
+            document.getElementById("inputBText").textContent = inputB ? "1" : "0";
+            document.getElementById("outputText").textContent = output ? "1" : "0";
+
+            document.getElementById("wireA").classList.toggle("off", !inputA);
+            document.getElementById("wireB").classList.toggle("off", !inputB);
+            document.getElementById("wireOut").classList.toggle("off", !output);
+
+            document.getElementById("inputAText").classList.toggle("off", !inputA);
+            document.getElementById("inputBText").classList.toggle("off", !inputB);
+            document.getElementById("outputText").classList.toggle("off", !output);
+
+            document.getElementById("status").textContent =
+                "Input A = " + (inputA ? "1" : "0") +
+                " | Input B = " + (inputB ? "1" : "0") +
+                " | Output = " + (output ? "1" : "0");
+        }
+
+        function setInputs(a, b) {
+            inputA = a;
+            inputB = b;
+            updateGate();
+        }
+
+        updateGate();
+
+    </script>
+
+</body>
+</html>
