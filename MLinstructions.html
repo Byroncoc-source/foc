@@ -1,0 +1,343 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Machine Language Instructions - Fundamentals of Computing</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 15px;
+        }
+
+        /* MAIN LAYOUT */
+        .container {
+            display: flex;
+            min-height: 500px;
+        }
+
+        /* SIDE NAVIGATION */
+        nav {
+            width: 220px;
+            background-color: white;
+            padding: 25px 15px;
+            border-right: 1px solid #ddd;
+        }
+
+        nav h3 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            flex: 1;
+            padding: 35px;
+            background-color: #eaf4ff;
+            text-align: center;
+        }
+
+        main h2 {
+            margin-top: 0;
+            font-size: 30px;
+        }
+
+        main p {
+            line-height: 1.6;
+        }
+
+        /* PROJECT CARD */
+        .card {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 25px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        /* MACHINE LANGUAGE IMAGE */
+        .project-image {
+            display: block;
+            max-width: 100%;
+            width: 430px;
+            height: auto;
+            margin: 15px auto 25px;
+            border-radius: 8px;
+            border: 2px solid #333;
+        }
+
+        /* BUTTONS */
+        button {
+            margin: 12px 5px 5px;
+            padding: 10px 18px;
+            background-color: white;
+            color: #222;
+            border: 2px solid #333;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* RESULT */
+        .result {
+            margin-top: 18px;
+            padding: 15px;
+            min-height: 50px;
+            background-color: #f4f6f8;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* SMALL SCREEN */
+        @media (max-width: 700px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            nav {
+                width: 100%;
+                border-right: none;
+            }
+
+            main {
+                padding: 25px 12px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>Fundamentals of Computing</h1>
+
+        <p>My Computing Course Website</p>
+
+    </header>
+
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+        <!-- LEFT NAVIGATION -->
+        <nav>
+
+            <h3>Menu</h3>
+
+            <a href="index2.html">Course</a>
+
+            <a href="project.html">Project</a>
+
+            <a href="concepts.html">Concepts</a>
+
+            <a href="database.html">Databases</a>
+
+            <a href="documentation.html">Documentation</a>
+
+            <a href="aboutme1.html">Dev Team</a>
+
+        </nav>
+
+
+        <!-- MAIN CONTENT -->
+        <main>
+
+            <h2>Machine Language Instructions</h2>
+
+            <div class="card">
+
+                <p>
+                    Click an instruction to see what the simple
+                    machine-language code means.
+                </p>
+
+
+                <!-- MACHINE LANGUAGE IMAGE -->
+
+                <img id="machineImage"
+                     src="MLblank.png"
+                     alt="Simple Machine Language chart"
+                     class="project-image">
+
+
+                <!-- INSTRUCTION BUTTONS -->
+
+                <div>
+
+                    <button onclick="show('156C')">
+                        156C
+                    </button>
+
+                    <button onclick="show('166D')">
+                        166D
+                    </button>
+
+                    <button onclick="show('5056')">
+                        5056
+                    </button>
+
+                    <button onclick="show('306E')">
+                        306E
+                    </button>
+
+                    <button onclick="show('C000')">
+                        C000
+                    </button>
+
+                </div>
+
+
+                <!-- RESULT -->
+
+                <div id="r" class="result">
+
+                    Click an instruction.
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            @ Byron Coc | Fundamentals of Computing
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        /* Machine language explanations */
+
+        const d = {
+
+            '156C':
+                'LOAD register 5 from memory cell 6C.',
+
+            '166D':
+                'LOAD register 6 from memory cell 6D.',
+
+            '5056':
+                'ADD registers 0 and 6 and store the result in register 5.',
+
+            '306E':
+                'STORE register 0 at memory cell 6E.',
+
+            'C000':
+                'HALT — stop the machine.'
+
+        };
+
+
+        /* Images for each instruction */
+
+        const images = {
+
+            '156C': '156C.png',
+
+            '166D': '166D.png',
+
+            '5056': '5056.png',
+
+            '306E': '306E.png',
+
+            'C000': 'C000.png'
+
+        };
+
+
+        /* Change the image and explanation */
+
+        function show(x) {
+
+            document.getElementById('machineImage').src = images[x];
+
+            document.getElementById('r').textContent =
+                x + ' → ' + d[x];
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+```
