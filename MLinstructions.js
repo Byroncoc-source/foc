@@ -1,4 +1,3 @@
-/* Machine Language Instructions */
 
 const d = {
 
@@ -20,7 +19,6 @@ const d = {
 };
 
 
-/* Images for each instruction */
 
 const images = {
 
@@ -37,7 +35,6 @@ const images = {
 };
 
 
-/* Change the image and explanation */
 
 function show(x) {
 
