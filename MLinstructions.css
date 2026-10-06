@@ -9,7 +9,6 @@ body {
     color: #222;
 }
 
-/* HEADER */
 
 header {
     background-color: #333;
@@ -28,14 +27,12 @@ header p {
     font-size: 15px;
 }
 
-/* MAIN LAYOUT */
 
 .container {
     display: flex;
     min-height: 500px;
 }
 
-/* SIDE NAVIGATION */
 
 nav {
     width: 220px;
@@ -65,7 +62,6 @@ nav a:hover {
     color: white;
 }
 
-/* MAIN CONTENT */
 
 main {
     flex: 1;
@@ -83,7 +79,6 @@ main p {
     line-height: 1.6;
 }
 
-/* PROJECT CARD */
 
 .card {
     max-width: 900px;
@@ -94,7 +89,6 @@ main p {
     border-radius: 10px;
 }
 
-/* MACHINE LANGUAGE IMAGE */
 
 .project-image {
     display: block;
@@ -106,7 +100,6 @@ main p {
     border: 2px solid #333;
 }
 
-/* BUTTONS */
 
 button {
     margin: 12px 5px 5px;
@@ -124,7 +117,6 @@ button:hover {
     color: white;
 }
 
-/* RESULT */
 
 .result {
     margin-top: 18px;
@@ -135,7 +127,6 @@ button:hover {
     font-weight: bold;
 }
 
-/* FOOTER */
 
 footer {
     background-color: #333;
