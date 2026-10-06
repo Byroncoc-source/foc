@@ -21,7 +21,6 @@
             color: #222;
         }
 
-        /* HEADER */
         header {
             background-color: #333;
             color: white;
@@ -39,13 +38,11 @@
             font-size: 15px;
         }
 
-        /* MAIN LAYOUT */
         .container {
             display: flex;
             min-height: 500px;
         }
 
-        /* SIDE NAVIGATION */
         nav {
             width: 220px;
             background-color: #ffffff;
@@ -74,7 +71,6 @@
             color: white;
         }
 
-        /* MIDDLE CONTENT */
         main {
             flex: 1;
             padding: 35px;
@@ -91,7 +87,6 @@
             line-height: 1.6;
         }
 
-        /* JAVASCRIPT IMAGE */
         #myImage {
             width: 200px;
             height: 200px;
@@ -100,7 +95,6 @@
             margin: 25px auto;
         }
 
-        /* BUTTONS */
         button {
             background-color: white;
             color: #222;
@@ -117,7 +111,6 @@
             color: white;
         }
 
-        /* FOOTER */
         footer {
             background-color: #333;
             color: white;
@@ -129,7 +122,6 @@
             margin: 0;
         }
 
-        /* SMALL SCREEN */
         @media (max-width: 700px) {
 
             .container {
@@ -149,7 +141,6 @@
 
 <body>
 
-    <!-- HEADER -->
     <header>
 
         <h1>Fundamentals of Computing</h1>
@@ -159,10 +150,8 @@
     </header>
 
 
-    <!-- MAIN CONTAINER -->
     <div class="container">
 
-        <!-- LEFT NAVIGATION -->
         <nav>
 
             <h3>Menu</h3>
@@ -183,7 +172,6 @@
         </nav>
 
 
-        <!-- MAIN CONTENT -->
         <main>
 
             <h2>The NOT Gate</h2>
@@ -195,17 +183,14 @@
             </p>
 
 
-            <!-- HAPPY BUTTON -->
             <button onclick="document.getElementById('myImage').src='notoff2.png'">
                 NOT OFF
             </button>
 
 
-            <!-- IMAGE -->
             <img id="myImage" src="notoff2.png" alt="Happy or Sad face">
 
 
-            <!-- SAD BUTTON -->
             <button onclick="document.getElementById('myImage').src='noton2.png'">
                 NOT ON
             </button>
@@ -215,7 +200,6 @@
     </div>
 
 
-    <!-- FOOTER -->
     <footer>
 
         <p>@ Byron Coc | Fundamentals of Computing</p>
